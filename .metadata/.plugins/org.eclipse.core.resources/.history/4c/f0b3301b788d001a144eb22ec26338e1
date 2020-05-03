@@ -1,0 +1,32 @@
+package br.com.cripto;
+
+import java.io.FileInputStream;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import br.com.cripto.clients.CodenationClient;
+import br.com.cripto.dto.AnswerDto;
+import br.com.cripto.jobs.CodenationRequest;
+import br.com.cripto.utils.CodenationCripto;
+
+@SpringBootApplication
+public class CriptoStarter {
+
+	//c16f69cede9fd74764d37f6c74a8e34a7d0c59f6
+	public static void main(String[] args) {
+		
+
+		ConfigurableApplicationContext context = SpringApplication.run(CriptoStarter.class, args);
+		
+		CodenationClient cc = context.getBean(CodenationClient.class);
+		//cc.getAnswer();
+		cc.post();
+			
+		
+		
+		//the older i get, the more i beliee that the onl a to become a better programmer is b not programming. jeff atood
+		//ymj tqijw n ljy, ymj rtwj n gjqnjaj ymfy ymj tsqd bfd yt gjhtrj f gjyyjw uwtlwfrrjw nx gd sty uwtlwfrrnsl. ojkk fybtti",
+	}
+}

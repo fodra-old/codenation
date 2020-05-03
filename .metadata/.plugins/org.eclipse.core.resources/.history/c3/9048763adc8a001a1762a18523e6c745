@@ -1,0 +1,32 @@
+package br.com.cripto.clients;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.web.client.RestTemplate;
+
+import br.com.cripto.dto.AnswerDto;
+
+@Component
+public class CondenationClient {
+
+	@Autowired
+	private RestTemplate rest;
+	
+	public void post(AnswerDto answer) {
+	
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+		
+		String url = "";
+		
+		HttpEntity<LinkedMultiValueMap<String, AnswerDto>> requestEntity =
+				new HttpEntity<LinkedMultiValueMap<String,AnswerDto>>(headers);
+		requestEntity.getBody().add("answer", answer);
+		
+		rest.postForObject(url, requestEntity);
+	}
+}

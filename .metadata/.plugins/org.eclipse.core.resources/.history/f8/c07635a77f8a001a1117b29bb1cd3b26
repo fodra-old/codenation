@@ -1,0 +1,11 @@
+package br.com.cripto;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		System.out.println("d".charAt(0) + 0);
+		System.out.println("y".charAt(0) + 0);
+	}
+
+}

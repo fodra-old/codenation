@@ -1,0 +1,16 @@
+package br.com.cripto.clients;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
+
+@Component
+public class CondenationClient {
+
+	
+	public void post() {
+	
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+	}
+}

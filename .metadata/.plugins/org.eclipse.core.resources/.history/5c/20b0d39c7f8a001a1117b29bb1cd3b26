@@ -1,0 +1,10 @@
+package br.com.cripto;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		System.out.println("d".charAt(0) - 5);
+	}
+
+}

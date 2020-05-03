@@ -1,0 +1,12 @@
+package br.com.cripto;
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CriptoStarter {
+
+	//c16f69cede9fd74764d37f6c74a8e34a7d0c59f6
+	public static void main(String[] args) {
+		
+	}
+}

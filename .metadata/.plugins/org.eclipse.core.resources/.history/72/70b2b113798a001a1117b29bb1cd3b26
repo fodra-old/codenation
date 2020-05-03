@@ -1,0 +1,13 @@
+package br.com.cripto.utils;
+
+public class CodanationCripto {
+
+	public static String encriptar(int chave, String valor) {
+		
+		return null;
+	}
+	public static String decriptar(int chave, String valor) {
+		
+		return null;
+	}
+}

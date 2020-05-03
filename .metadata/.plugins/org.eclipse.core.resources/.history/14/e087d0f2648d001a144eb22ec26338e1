@@ -1,0 +1,59 @@
+package br.com.cripto.clients;
+
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import br.com.cripto.dto.AnswerDto;
+
+@Component
+public class CodenationClient {
+
+	@Autowired
+	private RestTemplate rest;
+
+	private WebClient client;
+
+	public void post(AnswerDto answer) {
+
+		//		rest.pos
+		//		client.h
+
+		//		HttpHeaders headers = new HttpHeaders();
+		//		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+		//		
+		//		headers.set("answer", answer);
+
+		//		String url = "https://api.codenation.dev/v1/challenge/"
+		//				+ "dev-ps/submit-solution?token=" + BeanBuild.TOKEN;
+		//		
+		//		HttpEntity<LinkedMultiValueMap<String, AnswerDto>> requestEntity =
+		//				new HttpEntity<>();
+		//		
+		//		rest.postForLocation(url, requestEntity);
+	}
+	private void sendFile(OutputStream out, String name, InputStream in, String fileName) throws Exception {
+		String o = "Content-Disposition: form-data; name=\"" + URLEncoder.encode(name,"UTF-8") 
+		+ "\"; filename=\"" + URLEncoder.encode(fileName,"UTF-8") + "\"\r\n\r\n";
+		out.write(o.getBytes(StandardCharsets.UTF_8));
+		byte[] buffer = new byte[2048];
+		for (int n = 0; n >= 0; n = in.read(buffer))
+			out.write(buffer, 0, n);
+		out.write("\r\n".getBytes(StandardCharsets.UTF_8));
+	}
+
+	private void sendField(OutputStream out, String name, String field) {
+		String o = "Content-Disposition: form-data; name=\"" 
+				+ URLEncoder.encode(name,"UTF-8") + "\"\r\n\r\n";
+		out.write(o.getBytes(StandardCharsets.UTF_8));
+		out.write(URLEncoder.encode(field,"UTF-8").getBytes(StandardCharsets.UTF_8));
+		out.write("\r\n".getBytes(StandardCharsets.UTF_8));
+	}
+}

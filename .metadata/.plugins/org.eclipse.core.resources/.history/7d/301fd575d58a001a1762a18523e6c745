@@ -1,0 +1,21 @@
+package br.com.cripto;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		//the older i get' the more i belie\e that the onl_ ]a_ to become a better programmer is b_ not programming) jeff at]ood
+		//ymj tqijw n ljy, ymj rtwj n gjqnjaj ymfy ymj tsqd bfd yt gjhtrj f gjyyjw uwtlwfrrjw nx gd sty uwtlwfrrnsl. ojkk fybtti",
+		
+		for (int i = 0; i < 257; i++) {
+			
+			System.out.println(i + ": " + (char) i);
+		}
+		
+		//System.out.println("'".charAt(0) + 0);
+		//System.out.println("z".charAt(0) + 0);
+		
+		//System.out.println((char) 123);
+	}
+
+}

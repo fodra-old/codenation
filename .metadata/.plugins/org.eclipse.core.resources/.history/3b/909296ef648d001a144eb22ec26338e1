@@ -1,0 +1,36 @@
+package br.com.cripto.clients;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Component;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.web.client.RestTemplate;
+
+import br.com.cripto.config.BeanBuild;
+import br.com.cripto.dto.AnswerDto;
+
+@Component
+public class CodenationClient {
+
+	@Autowired
+	private RestTemplate rest;
+	
+	public void post(AnswerDto answer) {
+	
+//		HttpHeaders headers = new HttpHeaders();
+//		headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+//		
+//		headers.set("answer", answer);
+		
+		String url = "https://api.codenation.dev/v1/challenge/"
+				+ "dev-ps/submit-solution?token=" + BeanBuild.TOKEN;
+		
+		HttpEntity<LinkedMultiValueMap<String, AnswerDto>> requestEntity =
+				new HttpEntity<LinkedMultiValueMap<String,AnswerDto>>();
+		
+		rest.postForLocation(url, requestEntity);
+	}
+}

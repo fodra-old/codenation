@@ -1,0 +1,24 @@
+package br.com.cripto.utils;
+
+import java.util.stream.Stream;
+
+public class CodenationCripto {
+
+	public static String encriptar(int chave, String valor) {
+		
+		chave = (chave < 0 ? -1 : 1) * chave;
+		return encdec(chave, valor);
+	}
+	public static String decriptar(int chave, String valor) {
+		
+		chave = (chave > 0 ? -1 : 1) * chave;
+		return encdec(chave, valor);
+	}
+	private static String encdec(int chave, String valor) {
+		StringBuilder builder = new StringBuilder();
+		Stream.of(valor.toCharArray()).forEach(x -> {
+			builder.append(x[0] + chave);
+		});
+		return builder.toString();
+	}
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.SpringBootApplication"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="org.springframework.boot.SpringApplication"/>
+<fullyQualifiedTypeName name="org.springframework.web.reactive.function.server.EntityResponse"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="java.util.stream.Stream"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="com.fasterxml.jackson.databind.ObjectMapper"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="br.com.cripto.jobs.CodenationRequest"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Character"/>
+<fullyQualifiedTypeName name="org.springframework.util.DigestUtils"/>
+<fullyQualifiedTypeName name="org.apache.commons.codec.digest.DigestUtils"/>
+<fullyQualifiedTypeName name="org.springframework.util.MultiValueMap"/>
+<fullyQualifiedTypeName name="java.net.http.HttpHeaders"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpHeaders"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
+<fullyQualifiedTypeName name="org.springframework.util.LinkedMultiValueMap"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="org.springframework.http.HttpEntity"/>
+<fullyQualifiedTypeName name="br.com.cripto.dto.AnswerDto"/>
+<fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
+<fullyQualifiedTypeName name="br.com.cripto.utils.CodenationCripto"/>
+<fullyQualifiedTypeName name="br.com.cripto.clients.CondenationClient"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+<fullyQualifiedTypeName name="br.com.cripto.config.BeanBuild"/>
+</qualifiedTypeNameHistroy>

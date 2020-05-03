@@ -1,0 +1,29 @@
+package br.com.cripto.utils;
+
+public class CodenationCripto {
+
+	public static String encriptar(int chave, String valor) {
+		
+		chave = (chave < 0 ? -1 : 1) * chave;
+		return encdec(chave, valor);
+	}
+	public static String decriptar(int chave, String valor) {
+		
+		chave = (chave > 0 ? -1 : 1) * chave;
+		return encdec(chave, valor);
+	}
+	private static String encdec(int chave, String valor) {
+		
+		StringBuilder builder = new StringBuilder();
+		valor.chars().forEach(x -> {
+			
+			x += chave;
+			while(x < 97 || x > 122)
+				x = ' ';
+
+			builder.append((char)(x));
+			
+			});
+		return builder.toString();
+	}
+}

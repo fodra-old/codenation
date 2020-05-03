@@ -1,0 +1,19 @@
+package br.com.cripto.jobs;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+import br.com.cripto.dto.AnswerDto;
+
+public class CodenationRequest {
+
+	@Autowired
+	private RestTemplate restTemplate;
+	
+	public void invocaAnser() {
+		
+		AnswerDto answer = restTemplate.getForObject(
+				"https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=c16f69cede9fd74764d37f6c74a8e34a7d0c59f6", AnswerDto.class);
+		
+	}
+}

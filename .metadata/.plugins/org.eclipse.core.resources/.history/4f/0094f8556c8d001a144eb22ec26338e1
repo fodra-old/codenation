@@ -1,0 +1,60 @@
+package br.com.cripto.clients;
+
+import java.io.FileInputStream;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class CodenationClient {
+
+//	private ObjectMapper mapper = new ObjectMapper();
+
+	public void post() {
+
+		try(FileInputStream fileInputStream =
+		new FileInputStream("answer.json")) {
+			
+		}
+		
+		/*
+		
+		try (CloseableHttpClient client = HttpClientBuilder.create().build()){
+			
+			FileInputStream fileInputStream =
+					new FileInputStream("answer.json");
+			
+			AnswerDto answer = mapper.readValue(fileInputStream, AnswerDto.class);
+			answer.setDecifrado(
+					CodenationCripto.decriptar(
+							(Integer.valueOf(answer.getNumero_casas())*-1), 
+							answer.getCifrado()));
+			answer.setResumo_criptografico(
+					CodenationCripto.convertToSha1(answer.getDecifrado()));
+			
+			String url = "https://api.codenation.dev/v1/challenge/"
+					+ "dev-ps/submit-solution?token=" + BeanBuild.TOKEN;
+
+			File file = new File("./answer.json");
+
+			HttpPost post = new HttpPost(url);
+			
+			StringBody body = new StringBody(mapper.writeValueAsString(answer), ContentType.MULTIPART_FORM_DATA);
+			FileBody fileBody = new FileBody(file, ContentType.DEFAULT_BINARY);
+			
+			MultipartEntityBuilder builder = MultipartEntityBuilder.create();
+			builder.addPart("answer", body);
+			builder.addPart("file", fileBody);
+			
+			HttpEntity entity = builder.build();
+			post.setEntity(entity);
+			
+			HttpResponse response = client.execute(post);
+			HttpEntity responseEntity = response.getEntity();
+			System.out.println(IOUtils.toString(responseEntity.getContent()));
+		} catch (Exception e) {
+
+			e.printStackTrace();
+		}
+		*/
+	}
+}
